@@ -52,7 +52,21 @@ document.getElementById('submitOddOrEven').addEventListener('click', function() 
 });
 
 
+// Replacing words in a sentence
+// Original sentence
+var givenSentence = 'The good news is that everyone makes mistakes. All of the mistakes you make, have been made by others who started off just like you.';
+console.log(givenSentence);
+// Tells the event what words to change and effects the whole variable
+var replacedSentences = givenSentence.replace(/mistakes/g, 'bugs');
+console.log(givenSentence);
 
+// Doesn't display any text until the button has been pressed
+document.getElementById('changeSentece').addEventListener('click', function() {
+	// Displays the first sentence on the left hand side of the screen
+	document.getElementById('originalSentence').innerHTML = givenSentence;
+	// Displays the edited sentence on the right hand side of the screen
+	document.getElementById('editedSentence').innerHTML = replacedSentences;
+});
 
 
 
