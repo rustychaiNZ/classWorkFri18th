@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/stylesheet.css">
+
+		<title>Exercises - Friday 18th</title>
+	</head>
+	<body>
+
+		<div class="jumbotron">
+			<h1 class="display-4 text-center">Class Exercises</h1>
+		</div>
+
+		<div class="container bg-light">
+
+			<!-- Takes a user's inputted string and finds if it is a palindrome -->
+			<form>
+				<h2>Find out if your word is a palidrone</h2>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="userString">Enter a string</label>
+					</div>
+					<div class="col-md-11">
+						<input type="text" id="userString" class="form-control" placeholder="Enter a single word">
+					</div>
+					<div class="col-md-1">
+						<button type="button" class="btn btn-info" id="submitString">Submit</button>
+					</div>
+				</div>
+				<h3>Is the String a Paladrone?</h2>
+				<p id="stringOutput"></p>
+			</form>
+			
+			<form>
+				<h2>Is your number an odd or even</h2>
+				<div class="row">
+					<!-- User input -->
+					<div class="col-md-6">
+						<h3>Enter Your Number</h3>
+						<div class="row">
+							<input type="text" id="userOddOrEven" class="form-control col-md-8" placeholder="Enter a single Number">
+							<button type="button" id="submitOddOrEven" class="btn btn-info">Submit</button>
+						</div>
+					</div>
+					<!-- User results -->
+					<div class="col-md-6">
+						<h3>Your Results</h3>
+						<p id="resultOddOrEven"></p>
+					</div>
+				</div>
+			</form>
+
+		<!-- End of container -->
+		</div>
+
+		<!-- Optional JavaScript -->
+		<script src="js/script.js"></script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
