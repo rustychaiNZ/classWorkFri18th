@@ -68,6 +68,90 @@ document.getElementById('changeSentece').addEventListener('click', function() {
 	document.getElementById('editedSentence').innerHTML = replacedSentences;
 });
 
+// Function that displays the dogs in the array 
+function writeDogs(){
+	document.getElementById('dogBreedResults').innerHTML += '<h3>Dog Breeds in Array</h3>';	
+	for(i=0; i < dogBreeds.length; i++){
+		document.getElementById('dogBreedResults').innerHTML += dogBreeds[i] + '<br>';
+	}
+	
+}
+// Function that clears the results for the dog array
+function clearDogs(){
+	document.getElementById('dogBreedResults').innerHTML = '';
+}
+// Clears search field for dogs
+function clearField() {
+	document.getElementById('dogBreedInput').value = '';
+}
+
+// An array of dog breeds that can be accessed by the user
+var dogBreeds = ['jack russell' , 'golden retreiver' , 'beagle'];
+// Querried function that writes what dogs in the array when page 
+writeDogs();
+
+// Adding dog to the array
+document.getElementById('addToBtn').addEventListener('click' , function() {
+	clearDogs();
+	// Takes user input from field
+	var dogSearchQuerry = (document.getElementById('dogBreedInput').value).toLowerCase();
+	// Adds the user inputted dog breed to the array
+	dogBreeds.push(dogSearchQuerry);
+	writeDogs();
+	// Clears the input field for entering new query
+	clearField();
+});
+
+// Deleteing dog from the array
+document.getElementById('deleteFromBtn').addEventListener('click' , function() {
+	clearDogs();
+	var x = 0;
+	// Records querry inputted by user
+	var dogSearchQuerry = (document.getElementById('dogBreedInput').value).toLowerCase();
+	// Deletes dog from array
+	var index = dogBreeds.indexOf(dogSearchQuerry);
+	for(i=0; i < dogBreeds.length; i++) {
+		if(dogBreeds[i] === dogSearchQuerry) {
+			delete dogBreeds[i];
+			x = i;
+			console.log(dogBreeds);
+			
+		} else if (dogBreeds.includes(dogSearchQuerry) === false) {
+			console.log(dogBreeds);
+			document.getElementById('dogBreedResults').innerHTML = '<p>The array does not include that breed</p>';
+		} else if (x == i){
+			console.log(dogBreeds);
+
+			document.getElementById('dogBreedResults').innerHTML += " This is deleted";
+		}
+		else {
+			console.log(dogBreeds);
+			document.getElementById('dogBreedResults').innerHTML += dogBreeds[i] + '<br>'; 
+		}
+	}
+	// dogBreeds.splice(dogSearchQuerry);
+	// writeDogs();
+	console.log(dogBreeds);
+	clearField();
+});
+
+// Sorting Dogs by alphabetical
+document.getElementById('sortBtn').addEventListener('click' , function() {
+	// Clears results field for dogs so that the array won't duplicate for the user
+	clearDogs();
+	for(i=0; i < dogBreeds.length; i++) {
+		// Sorts dogs alphabetically from a - z
+		dogBreeds.sort();
+		// Re-writes the dog breeds in their new order
+		writeDogs();
+	}
+});
+
+
+
+
+
+
 
 
 
